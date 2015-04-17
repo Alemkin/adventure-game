@@ -35,7 +35,7 @@ public class Filler extends Character{
 		else
 			return false; 
 	}
-	//Name: Modify if you want to get creative
+	//Name
 	public String getName() {
 		String tempString = "The Protector";
 		return tempString;

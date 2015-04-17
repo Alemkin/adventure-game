@@ -30,10 +30,6 @@ public class Board {
 					caveArray[i][j] = new Cave(i,j);
 					caveArray[i][j].makePit();
 				}
-				else if (rand > 600 && rand < 650) {
-					caveArray[i][j] = new Cave(i,j);
-					caveArray[i][j].makeDragon();
-				}
 				else {
 					caveArray[i][j] = new Cave(i,j);
 					caveArray[i][j].makeTeleport();	

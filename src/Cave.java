@@ -14,39 +14,7 @@ public class Cave {
 	public boolean pit = false;
 	public boolean blocked = false;
 	public boolean teleport = false;
-	public boolean dragon = false;
-	
-	/*public enum CaveType {
-		OPEN,
-		BLOCKED,
-		PIT,
-		TELEPORT;
-		
-	}
-		
-		public static Cave.CaveType[] values(){
-			Cave.CaveType[] tempArr = new Cave.CaveType[4];
-			int i = 0;
-			for (Cave.CaveType c : Cave.CaveType.values()) {
-				Cave.CaveType tempCav = c;
-				tempArr[i] = tempCav;
-				i++;
-			}
-			return tempArr;
-		}
-		public static Cave.CaveType valueOf(String name) {
-			if (name == "OPEN")
-				return CaveType.OPEN;
-			else if	(name == "BLOCKED") 
-				return CaveType.BLOCKED;
-			else if	(name == "PIT")
-				return CaveType.PIT;
-			else if	(name == "TELEPORT")
-				return CaveType.TELEPORT;
-			else
-				return null;
-		}
-*/	
+
 	
 	public Cave(int r, int c) {
 		rows = r;
@@ -82,21 +50,8 @@ public class Cave {
 		blocked = false;
 		pit = false;
 		teleport = false;
-		dragon = false;
 	}
-	
-	public void makeDragon() {
-		open = false;
-		blocked = false;
-		pit = false;
-		teleport = false;
-		dragon = true;
-	}
-	
-	public boolean isDragon() {
-		return dragon;
-	}
-	
+
 	public boolean isOpen() {
 		return open;
 	}
@@ -106,7 +61,6 @@ public class Cave {
 		open = false;
 		pit = false;
 		teleport = false;
-		dragon = false;
 	}
 	
 	public boolean isBlocked() {
@@ -118,7 +72,6 @@ public class Cave {
 		open = false;
 		blocked = false;
 		teleport = false;
-		dragon = false;
 	}
 	
 	public boolean isPit() {
@@ -130,7 +83,6 @@ public class Cave {
 		pit = false;
 		blocked = false;
 		open = false;
-		dragon = false; 
 	}
 	
 	public boolean isTeleport() {

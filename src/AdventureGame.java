@@ -117,11 +117,6 @@ public class AdventureGame implements KeyListener,MouseListener {
 					img+="pit.png";
 				else if (c.isTeleport() && c.isMarked())
 					img+="portal.png";
-				else if (c.isDragon())
-					img +="cave.png";
-				else if (c.isDragon() && c.isMarked()) {
-					img +="dragon.png";
-				}
 				else // open OR teleport and not marked
 					img+="ground.png";
 				grid[i][j].setIcon(img);
@@ -234,19 +229,6 @@ public class AdventureGame implements KeyListener,MouseListener {
 						}
 					}
 				}
-				else if (newC.isDragon() && newC.isMarked() == false) { // This character is eaten by a dragon.
-					updateStatus(ch.getName()+" has found a dragon!");
-					newC.setMarked(true);
-					
-					updateGameBoard(); 
-					}
-				else if (newC.isDragon() && newC.isMarked()) { // This character is eaten by a dragon.
-					updateStatus(ch.getName()+" was eaten by the dragon and died!");
-					newC.setOccupied(false);
-					characters.remove(selected);
-					selected%=characters.size();
-					updateGameBoard(); 
-					}
 				else if (newC.isTeleport()) { // Transport this character to a random location.
 					Cave randomLoc = gameBoard.getUnoccupiedOpenLocation();
 					ch.move(randomLoc); // Guaranteed to return true.

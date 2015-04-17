@@ -20,9 +20,6 @@ public class Miner extends Character{
 		else {
 			tempCave.makeOpen();
 			
-			if(tempCave.isDragon()){
-				tempCave.setMarked(true);
-			}
 			return true;
 			
 		}
@@ -41,7 +38,7 @@ public class Miner extends Character{
 		else
 			return false; 
 	}
-	//Name: Modify if you want to get creative
+	//Name
 	public String getName() {
 		String tempString = "The Savior";
 		return tempString;

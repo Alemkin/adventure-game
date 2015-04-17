@@ -36,7 +36,7 @@ public class Adventurer extends Character{
 		else
 			return false; 
 	}
-	//Name: Modify if you want to get creative
+	//Name
 	public String getName() {
 		String tempString = "Alexandra the Great";
 		return tempString;
